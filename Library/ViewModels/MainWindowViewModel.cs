@@ -16,7 +16,13 @@ namespace Library.ViewModels
         public RelayCommand DeleteCommand { get; set; }
 
         public Repo AuthorsRepo { get; set; }
-        public DataSet AuthorSet { get; set; } = new DataSet();
+        private DataSet authorSet;
+
+        public DataSet AuthorSet
+        {
+            get { return authorSet; }
+            set { authorSet = value; }
+        }
 
         private int id;
 
